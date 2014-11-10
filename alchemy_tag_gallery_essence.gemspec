@@ -6,7 +6,7 @@ require "alchemy_tag_gallery_essence/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "alchemy-tag_gallery_essence"
-  s.version     = AlchemyTagGalleryEssence::VERSION
+  s.version     = Alchemy::TagGallery::Essence::VERSION
   s.authors     = ["Dmitry Veniyaminovich Tsvetkov"]
   s.email       = ["vlaew5@gmail.com"]
   s.homepage    = "http://belka-studio.ru/"
@@ -16,5 +16,5 @@ Gem::Specification.new do |s|
 
   s.files = `git ls-files`.split($/)
 
-  s.add_runtime_dependency 'alchemy_cms', ['>= 3.0.0.rc4']
+  s.add_runtime_dependency 'alchemy_cms', ['>= 3.0.0']
 end
