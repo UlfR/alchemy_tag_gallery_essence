@@ -17,4 +17,5 @@ Gem::Specification.new do |s|
   s.files = `git ls-files`.split($/)
 
   s.add_runtime_dependency 'alchemy_cms', ['>= 3.0.0']
+  s.metadata['allowed_push_host'] = 'https://github.com/vlaew/alchemy-tag_gallery_essence.git'
 end
