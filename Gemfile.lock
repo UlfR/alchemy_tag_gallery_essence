@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    alchemy-tag_gallery_essence (0.0.1)
+    alchemy_tag_gallery_essence (0.0.2)
       alchemy_cms (>= 3.0.0)
 
 GEM
@@ -171,4 +171,4 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  alchemy-tag_gallery_essence!
+  alchemy_tag_gallery_essence!
