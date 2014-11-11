@@ -1,10 +1,10 @@
 module Alchemy
   class EssenceTagGallery < ActiveRecord::Base
     acts_as_essence(
-        ingredient_column: 'tag',
+        ingredient_column: 'tag_id',
         preview_text_method: 'name'
     )
-    belongs_to :tag, class_name: 'Tag', foreign_key: 'tag_id'
+    belongs_to :tag, class_name: 'Alchemy::Tag', foreign_key: 'tag_id'
 
 
     validates_numericality_of :width, :height, :pictures_in_row,
