@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install alchemy_tag_gallery_essence
+    $ gem 'alchemy_tag_gallery_essence', github: 'vlaew/alchemy_tag_gallery_essence'
 
 ## Usage
 
