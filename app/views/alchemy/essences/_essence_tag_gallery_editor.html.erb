@@ -11,7 +11,7 @@
               :class => ['alchemy_selectbox very_long', html_options[:class]].join(' '),
               :style => html_options[:style]
       ) %>
-  <label><%= t('alchemy.essences.belka_tag_gallery.width') %></label>
+  <label><%= t('alchemy.essences.tag_gallery.width') %></label>
   <%= number_field_tag(
               content.form_field_name(:width),
               content.essence.width,
@@ -19,7 +19,7 @@
               style: html_options[:style],
               in: 1...1000
       ) %>
-  <label><%= t('alchemy.essences.belka_tag_gallery.height') %></label>
+  <label><%= t('alchemy.essences.tag_gallery.height') %></label>
   <%= number_field_tag(
               content.form_field_name(:height),
               content.essence.height,
@@ -27,7 +27,7 @@
               style: html_options[:style],
               in: 1...1000
       ) %>
-  <label><%= t('alchemy.essences.belka_tag_gallery.pictures_in_row') %></label>
+  <label><%= t('alchemy.essences.tag_gallery.pictures_in_row') %></label>
   <%= number_field_tag(
               content.form_field_name(:pictures_in_row),
               content.essence.pictures_in_row,
@@ -35,7 +35,21 @@
               style: html_options[:style],
               in: 1...1000
       ) %>
-  <br>Show image titles
+  <label><%= t('alchemy.essences.tag_gallery.title') %></label>
+  <%= text_field_tag(
+              content.form_field_name(:title),
+              content.essence.title,
+              class: ['thin_border', html_options[:class]].join(' '),
+              style: html_options[:style]
+      ) %>
+  <label><%= t('alchemy.essences.tag_gallery.alt') %></label>
+  <%= text_field_tag(
+              content.form_field_name(:alt),
+              content.essence.alt,
+              class: ['thin_border', html_options[:class]].join(' '),
+              style: html_options[:style]
+      ) %>
+  <br><%= t('alchemy.essences.tag_gallery.show_image_titles') %>
   <%= hidden_field_tag(content.form_field_name(:show_image_titles), 0) %>
   <%= check_box_tag(
               content.form_field_name(:show_image_titles),
@@ -44,4 +58,5 @@
               :class => html_options[:class],
               :style => html_options[:style]
       ) %>
+
 </div>

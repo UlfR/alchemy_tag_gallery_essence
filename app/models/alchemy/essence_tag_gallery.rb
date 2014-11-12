@@ -14,9 +14,11 @@ module Alchemy
     after_initialize :init
 
     def init
-      self.width ||= 100
-      self.height ||= 100
-      self.pictures_in_row ||= 3
+      self.width ||= Alchemy::TagGallery::Essence.configuration.default_width
+      self.height ||= Alchemy::TagGallery::Essence.configuration.default_height
+      self.pictures_in_row ||= Alchemy::TagGallery::Essence.configuration.default_pictures_in_row
+      self.title ||= Alchemy::TagGallery::Essence.configuration.default_title
+      self.alt ||= Alchemy::TagGallery::Essence.configuration.default_alt
     end
 
     def ingredient

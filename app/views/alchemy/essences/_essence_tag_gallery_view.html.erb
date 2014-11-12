@@ -11,8 +11,9 @@
           <% end %>
           <div class="col-md-3">
             <a class="darkbox" href="<%= show_alchemy_picture_url(picture) %>">
-              <img title="" src="
-                <%= show_alchemy_picture_url(picture, :size => "#{content.essence.width}x#{content.essence.height}", crop: true) %>" alt="">
+              <img title="<%= content.essence.title %>" src="
+                <%= show_alchemy_picture_url(picture, :size => "#{content.essence.width}x#{content.essence.height}", crop: true) %>"
+                   alt="<%= content.essence.alt %>">
             </a>
             <% if content.essence.show_image_titles %>
                 <h3><%= picture.name %></h3>

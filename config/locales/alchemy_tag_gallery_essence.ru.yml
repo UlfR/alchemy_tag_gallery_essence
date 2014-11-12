@@ -1,0 +1,10 @@
+ru:
+  alchemy:
+    essences:
+      tag_gallery:
+        width: ширина
+        height: высота
+        pictures_in_row: картинок в ряд
+        show_image_titles: показывать названия картинок
+        title: title
+        alt: alt

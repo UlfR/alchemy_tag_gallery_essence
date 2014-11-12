@@ -1,0 +1,10 @@
+en:
+  alchemy:
+    essences:
+      tag_gallery:
+        width: width
+        height: height
+        pictures_in_row: pictures_in_row
+        show_image_titles: show_image_titles
+        title: title
+        alt: alt
