@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    alchemy_tag_gallery_essence (0.0.2)
-      alchemy_cms (>= 3.0.0)
+    alchemy_tag_gallery_essence (0.0.3)
+      alchemy_cms (~> 3.0.0)
 
 GEM
   remote: https://rubygems.org/
