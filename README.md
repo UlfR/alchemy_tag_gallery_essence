@@ -10,15 +10,12 @@ This version is compatible with Alchemy version 3.0 and above only.
 
 Add this line to your application's Gemfile:
 
-    gem 'alchemy_tag_gallery_essence'
+    gem 'alchemy_tag_gallery_essence', github: 'vlaew/alchemy_tag_gallery_essence'
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem 'alchemy_tag_gallery_essence', github: 'vlaew/alchemy_tag_gallery_essence'
 
 ## Usage
 
