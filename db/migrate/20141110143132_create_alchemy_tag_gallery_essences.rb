@@ -9,6 +9,6 @@ class CreateAlchemyTagGalleryEssences < ActiveRecord::Migration
       t.integer :pictures_in_row
       t.timestamps
     end
-    add_index :alchemy_essence_belka_tag_galleries, :tag_id
+    add_index :alchemy_essence_tag_galleries, :tag_id
   end
 end

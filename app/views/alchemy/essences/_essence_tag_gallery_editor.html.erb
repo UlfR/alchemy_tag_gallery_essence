@@ -3,7 +3,7 @@
   <%= select_tag(
               content.form_field_name,
               options_from_collection_for_select(
-                      Alchemy::Tag.all,
+                      Alchemy::Tag.includes(:taggings).where(taggings: {taggable_type: 'Alchemy::Picture'}),
                       :id,
                       :name,
                       content.essence.tag_id
