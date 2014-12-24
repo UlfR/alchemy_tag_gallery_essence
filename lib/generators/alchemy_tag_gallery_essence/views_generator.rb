@@ -7,7 +7,7 @@ module AlchemyTagGalleryEssence
     def copy_views_files
       # create_file "config/initializers/initializer.rb", "# Add initialization content here"
       puts 'test'
-      puts source_root
+      puts self.class.source_root
       filename_pattern = File.join self.class.source_root, '*.html.erb'
       puts filename_pattern
       Dir.glob(filename_pattern).map {|f| File.basename f}.each do |f|
