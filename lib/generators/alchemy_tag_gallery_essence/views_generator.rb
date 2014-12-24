@@ -1,5 +1,5 @@
 module AlchemyTagGalleryEssence
-  class ViewsGenerator < Rails::Generators::NamedBase
+  class ViewsGenerator < Rails::Generators::Base
 
     source_root File.expand_path('../../../app/views/alchemy/essences', __FILE__)
 
