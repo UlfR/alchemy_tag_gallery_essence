@@ -2,28 +2,28 @@
 
 <% tag = content.essence.ingredient %>
 <% unless tag.nil? %>
-    <div class="col-xs-12 col-sm-12" tag="<%= tag.name %>">
-      <% pictures = Alchemy::Picture.tagged_with(tag.name, {order: 'name asc'}) %>
-      <% counter = 0 %>
-      <% pictures.each do |picture| %>
-          <% if ((counter % content.essence.pictures_in_row) == 0) %>
-              <div class="row text-center">
-          <% end %>
-          <div class="col-md-3">
-            <a class="darkbox" href="<%= show_alchemy_picture_url(picture) %>">
-              <img title="<%= content.essence.title %>" src="
-                <%= show_alchemy_picture_url(picture, :size => "#{content.essence.width}x#{content.essence.height}", crop: true) %>"
-                   alt="<%= content.essence.alt %>">
-            </a>
-            <% if content.essence.show_image_titles %>
-                <h3><%= picture.name %></h3>
-            <% end %>
-          </div>
-          <% if (((counter % content.essence.pictures_in_row) == content.essence.pictures_in_row - 1) || (counter == (pictures.count - 1))) %>
-              </div>
-              <br>
-          <% end %>
-          <% counter += 1 %>
+  <div>
+    <% pictures = Alchemy::Picture.tagged_with(tag.name, {order: 'name asc'}) %>
+    <% counter = 0 %>
+    <% pictures.each do |picture| %>
+      <% if ((counter % content.essence.pictures_in_row) == 0) %>
+        <div>
       <% end %>
-    </div>
+      <div>
+        <a href="<%= show_alchemy_picture_url(picture) %>">
+          <img title="<%= content.essence.title %>"
+               src="<%= show_alchemy_picture_url(picture, :size => "#{content.essence.width}x#{content.essence.height}", crop: true) %>"
+               alt="<%= content.essence.alt %>">
+        </a>
+        <% if content.essence.show_image_titles %>
+          <h3><%= picture.name %></h3>
+        <% end %>
+      </div>
+      <% if (((counter % content.essence.pictures_in_row) == content.essence.pictures_in_row - 1) || (counter == (pictures.count - 1))) %>
+        </div>
+        <br>
+      <% end %>
+      <% counter += 1 %>
+    <% end %>
+  </div>
 <% end %>
