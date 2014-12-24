@@ -30,8 +30,16 @@ And then execute:
           contents:
           - name: gallery
             type: EssenceTagGallery
-
+            
 That's it!
+
+## Customize views
+
+To customize views run:
+  
+      $ rails g alchemy_tag_gallery_essence:views
+      
+then edit the partials in your app's 'app/views/alchemy/essences/' directory.
 
 ## Contributing
 
