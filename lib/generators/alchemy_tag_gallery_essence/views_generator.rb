@@ -5,10 +5,11 @@ module AlchemyTagGalleryEssence
 
     desc ''
     def copy_views_files
-      filename_pattern = File.join self.class.source_root, '*.html.erb'
-      Dir.glob(filename_pattern).map {|f| File.basename f}.each do |f|
-        copy_file f, "app/views/alchemy/essences/#{f}"
-      end
+      create_file "config/initializers/initializer.rb", "# Add initialization content here"
+      # filename_pattern = File.join self.class.source_root, '*.html.erb'
+      # Dir.glob(filename_pattern).map {|f| File.basename f}.each do |f|
+      #   copy_file f, "app/views/alchemy/essences/#{f}"
+      # end
     end
   end
 end
